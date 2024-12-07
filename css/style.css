@@ -1,0 +1,497 @@
+ *{
+     margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+} 
+body{
+    width: 100%;
+    height: 100%;
+    background: black;
+}
+/********************************************header*******************************************************************************/
+.header{
+    
+height: 60px;
+display: flex;
+justify-content: space-evenly;
+align-items: center;
+
+}
+
+.header ul li{
+    display: inline-block;
+    font-size: 30px;
+    padding: 1px 3px;
+  
+}
+.header ul li a{
+    position: relative;
+    text-decoration: none;
+    padding: 1px 3px;
+    position: relative;
+    color: white;
+}
+
+
+.header ul li a::after{
+    content: '';
+    position: absolute;
+    box-sizing: border-box;
+    width: 100%;
+  height: 100%;
+  bottom: 0;
+  left: 0;
+  transition: all 0.3s linear;
+ border-width: 0px 1px;
+ border-color: rgb(168, 131, 131);
+ border-style: solid;
+ transform: scaleY(0);
+}
+.header ul li a:hover::after{
+   transform: scaleY(1);
+
+}
+
+.header ul li a::before{
+    content: '';
+    position: absolute;
+    box-sizing: border-box;
+    width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  transition: all 0.3s linear;
+  transition-delay: 0.3s;
+ border-width: 1px 0px;
+ border-color: rgb(168, 131, 131);
+ border-style: solid;
+ transform: scaleX(0);
+}
+.header ul li a:hover::before{
+    transform: scaleX(1);
+
+ }
+ 
+
+
+#tb_hover:hover .dropdwon_table {
+visibility: visible;
+background:rgba(0, 0, 0,0.7);
+color: white;
+transform: scale(1);
+transition: 1.5s;
+z-index: 14;
+
+}
+.dropdwon_table{
+    right: 31%;
+    top: 14.5%; 
+    position: absolute;
+   
+    transform: scale(0);
+   z-index: 14;
+    visibility: hidden;
+}
+.dropdwon_table_cont{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+}
+table{
+    border-collapse: collapse;
+    border-spacing: 5px;
+    
+
+   
+}
+   tr,td{
+    padding: 2px 20px;
+    text-align: center;
+   }
+   table tr:first-child{
+   border-bottom:1px dashed white;
+   }
+   .li_vpn{
+    position: relative;
+
+   }
+   .vpn{
+
+    color: gold;
+    font-size: 20px;
+    position: absolute;
+    top: -10px;
+    left:-8px ;
+   }
+   
+.header ul li{ color: white;}
+/*********************************************************************************************************************************************/
+.bk{
+    margin-top: 15px;
+    
+    display: flex;
+    justify-content: center;
+    align-items: center;
+ 
+}
+.bk_image{
+  
+    width: 1200px;
+    height: 500px;
+     background-image: url(../images/bf3.jpg);
+    background-size: cover; 
+    background-position: center;
+}
+.bk_overlay p{
+  
+font-size: x-large;
+color: white;
+}
+.bk_overlay button{
+    margin-top: 15px;
+padding: 10px;
+}
+.bk_overlay{
+   
+    position: absolute;
+    width: 1200px;
+    height: 500px;
+    background: rgba(0, 0, 0,0.5);
+      
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.bk_overlay_bt{
+    text-align: center;
+}
+/************************************************************************.item_container**********************************************************************/
+
+
+h2{
+    text-align: center;
+    font-size: x-large;
+    margin-top: 50px;
+    color: white;
+}
+.it_line{
+    width: 80px;
+    height: 3px;
+    background: white;
+    border-radius: 2px;
+    transition: 0.2s;
+    margin: auto;
+
+}
+
+.linr_H2:hover .it_line{
+transform: scaleX(1.4);
+transition: 0.2s;
+
+}
+.item_container{
+   margin-left: 2.5%;
+    width: 95%;
+    height: 100vh;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+.item{
+    
+    text-align: center;
+    width: 22%;
+    height: 70%;
+    /* border:1px solid black ; */
+}
+.item img{
+    border-radius: 2px;
+    width: 100%;
+    height: 80%;
+    
+}
+.item p {
+    margin-top: 5px;
+    font-size: 20px;
+    color: white;
+    /* color: #4a4a4a; */
+
+}
+
+.item span {
+     font-size: 20px;
+     color: white;
+  
+
+}
+
+.item i {
+    background:white;
+    color: black;
+    font-size: large;
+    width: 20px;
+    visibility: hidden;
+}
+.item:hover i{
+    visibility:visible;
+}
+/* ********************************price*************************************** */
+#price_ln{
+    margin-top: 3px;
+  padding-bottom: 25px;
+}
+.price{
+width: 91%;
+margin-left: 4.5%;
+height: 400px;
+display: flex;
+justify-content: space-between;
+align-items: center;
+
+}
+.price_ph{
+    width: 49%;
+    height: 100%;
+    position: relative;
+    background-color:rgba(30, 30, 30,0.5);
+}
+.price_img{
+    width: 24%;
+    height: 100%;
+    position: relative;
+    /* border: 1px solid white; */
+    box-shadow: 0px 1px white;
+
+}
+.price_img img{
+    width: 100%;
+    height: 100%;
+    position: absolute;
+}
+.price_img p{
+    font-size: 25px;
+    color: white;
+    position: absolute;
+left: 50%;
+top: 50%;
+transform: translate(-50%,-50%);
+transition: 0.1s;
+
+}
+.price_ph p{
+ 
+    position: absolute;
+    top: 20%;
+    left: 2%;
+    font-size: larger;
+    color: white;
+}
+.price_ph i{
+    font-size: 45px;
+    position: absolute;
+    color: white;
+}
+.price_ph span{
+   position: absolute;
+   left: 8%;
+    font-size:25px;
+    color: white;
+}
+
+.price_ph #steam{
+    font-size:15px;
+    left: 5%;
+    top: 7%;
+    
+ }
+.price_img:hover{
+    transition: 0.1s;
+    transform: scale(1.05);
+}
+.phline{
+    position: absolute;
+    width: 60px;
+    height: 2px;
+    top: 95%;
+    margin-left: 50%;
+    background: #ca3838;
+}
+.p2{
+    margin-left: 65%;
+
+}
+
+.p3{
+    margin-left: 80%;
+    
+}
+
+/***************************************************************************************************************************/
+.up_down{
+    margin: 50px 0px 70px 0px;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+
+}
+.up_down_img{
+    width: 20%;
+    height: 50px;
+    background-image: url(../images/service-icon.png);
+    background-repeat: no-repeat;
+    transition: all 0.3s ease;
+    /* border: 1px solid #ca3838; */
+}
+.m1{
+    background-position: center 5px;
+    }
+    
+    .m1:hover{
+        background-position: center -89px;
+    }
+    
+    .m2{
+        background-position: center -180px;
+    }
+    
+    .m2:hover {
+        background-position: center -273px;
+    }
+    
+    .m3 {
+        background-position: center -364px;
+    }
+    
+    .m3:hover {
+        background-position: center -457px;
+    }
+    
+    
+
+/*******************************************flip-card******************************************************/
+h1{
+    text-align: center;
+    margin-top: 20px;
+    color: white;
+}
+.flip_nav{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.flip_nav ul li{
+margin-top: 20px;
+  display: inline-block;
+  margin: 25px 20px 0px 25px;
+  color: white;
+}
+
+
+.flip-card {
+  display: flex;
+justify-content: space-evenly;
+align-items: center;
+
+
+    width: 100%;
+    height: 100vh;
+    perspective: 1000px;
+}
+.flip-card-front_container{
+  text-align: center;
+  width: 20%;
+    height: 80%;
+    /* border: 1px solid black; */
+}
+
+.flip-card-front_container i{
+ margin-top: 10px;
+ color: gold;
+ 
+}
+
+.flip-card-front_container p,h3{
+ margin-top: 20px;
+ color: white;
+
+ 
+}
+
+
+.flip-card-inner {
+    width: 100%;
+    height: 70%;
+    transform-style: preserve-3d;
+    transition: transform 0.5s;
+}
+.flip-card-inner img {
+  width: 100%;
+    height: 100%;
+
+}
+
+.flip-card-inner:hover {
+    transform: rotateY(180deg);
+}
+
+.flip-card-front, .flip-card-back {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    backface-visibility: hidden;
+}
+
+.flip-card-front {
+    background-color: #2196F3;
+    color: white;
+}
+
+.flip-card-back {
+    /* background-color: #f4f4f4; */
+    color: black;
+    transform: rotateY(180deg);
+}
+video{
+  width: 100%;
+  height: 100%;
+ 
+}
+/*******************************************************************footer*****************************************************************************/
+.footer{
+    width: 100%;
+    height: 250px;
+  
+} 
+.footer_icon{
+  margin-left: 50%;
+  transform: translateX(-50%);
+
+  margin-top: 20px;
+  width: 250px;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+ 
+} 
+.footer_icon i{
+   font-size: 30px;
+   text-align: center;
+    color: white;
+   
+
+}
+
+.footer_img img{
+ transform: translateX(-50%);
+  margin-left: 50%;
+ }
+
+
+
+ .footer_icon i:hover{
+  transform: scale(1.1);
+ color: #2196F3;
+
+}
